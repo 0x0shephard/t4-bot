@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-02-08 18:23:57",
+  "provider": "AWS",
+  "fetch_status": "success",
+  "data_sources": [
+    "Vantage.sh API (JSON)",
+    "Vantage.sh Web Scraping"
+  ],
+  "prices": {
+    "g4dn.xlarge (AWS)": "$1.01/hr",
+    "T4 Combined Average (AWS)": "$1.01/hr"
+  },
+  "notes": {
+    "instance_type": "g4dn.xlarge",
+    "gpu_model": "NVIDIA T4",
+    "gpu_memory": "16GB GDDR6",
+    "gpu_count_per_instance": 1,
+    "pricing_type": "On-Demand",
+    "methodology": "Average of Vantage API (JSON) and Vantage Web (multi-region) prices",
+    "source": "https://aws.amazon.com/ec2/instance-types/g4/"
+  }
+}

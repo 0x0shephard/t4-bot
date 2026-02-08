@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-02-08 18:35:43",
+  "provider": "Alibaba Cloud",
+  "fetch_status": "success",
+  "prices": {
+    "T4 Combined Average (Alibaba)": "$0.74/hr"
+  },
+  "notes": {
+    "instance_type": "ecs.gn6i",
+    "gpu_model": "NVIDIA T4",
+    "gpu_memory": "16GB GDDR6",
+    "pricing_type": "On-Demand",
+    "source": "https://www.alibabacloud.com/pricing"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-02-08 18:26:15",
+  "provider": "Azure",
+  "fetch_status": "success",
+  "data_sources": [
+    "Azure Retail Prices API",
+    "Vantage.sh",
+    "Azure Pricing Page"
+  ],
+  "prices": {
+    "NCasT4_v3 (Azure)": "$0.55/hr",
+    "T4 Combined Average (Azure)": "$0.55/hr"
+  },
+  "notes": {
+    "instance_type": "Standard_NC4as_T4_v3",
+    "gpu_model": "NVIDIA T4",
+    "gpu_memory": "16GB GDDR6",
+    "gpu_count_per_instance": 1,
+    "pricing_type": "On-Demand (Linux)",
+    "source": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+  }
+}

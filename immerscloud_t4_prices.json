@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-02-08 18:12:06",
+  "provider": "ImmersCloud",
+  "gpu_model": "T4",
+  "fetch_status": "failed",
+  "prices": {},
+  "notes": {
+    "gpu_model": "NVIDIA Tesla T4",
+    "gpu_memory": "16GB GDDR6",
+    "data_source": "https://en.immers.cloud/gpu/t4/",
+    "pricing_type": "marketplace (multiple listings averaged)"
+  }
+}

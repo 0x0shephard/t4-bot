@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-02-08 18:34:52",
+  "provider": "Thunder Compute",
+  "fetch_status": "success",
+  "prices": {
+    "T4 (Thunder Compute)": "$0.27/hr",
+    "T4 Combined Average (Thunder Compute)": "$0.27/hr"
+  },
+  "notes": {
+    "gpu_model": "NVIDIA T4",
+    "gpu_memory": "16GB GDDR6",
+    "pricing_type": "Pay-per-minute",
+    "source": "https://www.thundercompute.com/pricing"
+  }
+}

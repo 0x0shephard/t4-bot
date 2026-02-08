@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-02-08 17:33:10",
+  "provider": "CoreWeave",
+  "gpu_model": "T4",
+  "fetch_status": "failed",
+  "prices": {},
+  "notes": {
+    "gpu_model": "NVIDIA T4",
+    "gpu_memory": "16GB GDDR6",
+    "source": "https://www.coreweave.com/pricing"
+  }
+}

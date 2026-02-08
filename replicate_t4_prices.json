@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-02-08 18:35:17",
+  "provider": "Replicate",
+  "fetch_status": "success",
+  "prices": {
+    "T4 (Replicate)": "$0.81/hr",
+    "T4 Combined Average (Replicate)": "$0.81/hr"
+  },
+  "notes": {
+    "gpu_model": "NVIDIA T4",
+    "gpu_memory": "16GB GDDR6",
+    "pricing_type": "Pay-per-second",
+    "source": "https://replicate.com/pricing"
+  }
+}

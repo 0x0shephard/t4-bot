@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-02-08 17:41:01",
+  "provider": "Paperspace",
+  "gpu_model": "T4",
+  "fetch_status": "success",
+  "prices": {
+    "T4 16GB (Paperspace)": "$0.51/hr"
+  },
+  "notes": {
+    "gpu_model": "NVIDIA T4",
+    "gpu_memory": "16GB GDDR6",
+    "data_source": "paperspace.com",
+    "reference_price": "$0.35/hr (from comparison sites)"
+  }
+}

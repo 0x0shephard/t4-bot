@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-02-08 17:52:08",
+  "provider": "Vast.ai",
+  "gpu_model": "T4",
+  "fetch_status": "success",
+  "prices": {
+    "T4 (Vast.ai)": "$0.12/hr"
+  },
+  "notes": {
+    "gpu_model": "NVIDIA Tesla T4",
+    "gpu_memory": "16GB GDDR6",
+    "data_source": "vast.ai/pricing",
+    "pricing_type": "marketplace (variable)",
+    "reference_range": "$0.080 - $6.667/hr",
+    "typical_price": "$0.15/hr"
+  }
+}

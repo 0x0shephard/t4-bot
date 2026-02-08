@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-02-08 17:32:49",
+  "provider": "Lambda Labs",
+  "gpu_model": "T4",
+  "fetch_status": "failed",
+  "data_sources": [
+    "Lambda Labs Pricing Page"
+  ],
+  "prices": {},
+  "notes": {
+    "gpu_model": "NVIDIA T4",
+    "gpu_memory": "16GB GDDR6",
+    "source": "https://lambda.ai/pricing",
+    "pricing_type": "On-demand"
+  }
+}

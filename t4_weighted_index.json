@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-02-08 18:52:18",
+  "final_index_price": 0.41,
+  "components": {
+    "hyperscaler": 0.2593,
+    "neocloud": 0.151
+  },
+  "details": {
+    "hyperscalers": {
+      "AWS": {
+        "original": 1.01,
+        "discounted": 0.5656000000000001,
+        "effective": 0.6544800000000002,
+        "weight": 0.45,
+        "contribution": 0.1914354000000001
+      },
+      "Azure": {
+        "original": 0.55,
+        "discounted": 0.1925,
+        "effective": 0.264,
+        "weight": 0.3,
+        "contribution": 0.051480000000000005
+      },
+      "GCP": {
+        "original": 0.21,
+        "discounted": 0.0735,
+        "effective": 0.1008,
+        "weight": 0.25,
+        "contribution": 0.016380000000000002
+      }
+    },
+    "neoclouds": {
+      "Alibaba Cloud": {
+        "price": 0.74,
+        "raw_weight": 0.15
+      },
+      "Cerebrium": {
+        "price": 0.59,
+        "raw_weight": 0.1
+      },
+      "NeevCloud": {
+        "price": 0.29,
+        "raw_weight": 0.1
+      },
+      "Paperspace": {
+        "price": 0.51,
+        "raw_weight": 0.15
+      },
+      "Replicate": {
+        "price": 0.81,
+        "raw_weight": 0.1
+      },
+      "Tencent Cloud": {
+        "price": 0.2,
+        "raw_weight": 0.15
+      },
+      "Thunder Compute": {
+        "price": 0.27,
+        "raw_weight": 0.1
+      },
+      "Vast.ai": {
+        "price": 0.12,
+        "raw_weight": 0.15
+      }
+    }
+  }
+}

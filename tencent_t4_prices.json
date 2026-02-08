@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-02-08 17:41:13",
+  "provider": "Tencent Cloud",
+  "gpu_model": "T4",
+  "fetch_status": "success",
+  "prices": {
+    "GN7 T4 (Tencent)": "$0.20/hr"
+  },
+  "notes": {
+    "gpu_model": "NVIDIA T4",
+    "instance_type": "GN7",
+    "reference_price": "$0.20/hr"
+  }
+}

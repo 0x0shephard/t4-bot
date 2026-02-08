@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-02-08 18:35:09",
+  "provider": "Cerebrium",
+  "fetch_status": "success",
+  "prices": {
+    "T4 (Cerebrium)": "$0.59/hr",
+    "T4 Combined Average (Cerebrium)": "$0.59/hr"
+  },
+  "notes": {
+    "gpu_model": "NVIDIA T4",
+    "gpu_memory": "16GB GDDR6",
+    "pricing_type": "Serverless (pay-per-second)",
+    "source": "https://www.cerebrium.ai/pricing"
+  }
+}

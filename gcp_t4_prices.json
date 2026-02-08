@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-02-08 18:17:47",
+  "provider": "Google Cloud",
+  "fetch_status": "success",
+  "prices": {
+    "nvidia-tesla-t4 (Us Central1)": "$0.21/hr",
+    "nvidia-tesla-t4 (Us East1)": "$0.21/hr",
+    "nvidia-tesla-t4 (Us West1)": "$0.21/hr",
+    "nvidia-tesla-t4 (Europe West1)": "$0.21/hr",
+    "nvidia-tesla-t4 (Asia East1)": "$0.21/hr",
+    "T4 Combined Average (GCP)": "$0.55/hr"
+  },
+  "notes": {
+    "gpu_type": "nvidia-tesla-t4",
+    "gpu_model": "NVIDIA T4",
+    "gpu_memory": "16GB GDDR6",
+    "pricing_type": "On-demand GPU accelerator",
+    "source": "https://cloud.google.com/compute/gpus-pricing",
+    "note": "GCP charges for T4 GPUs separately from VM compute costs"
+  }
+}

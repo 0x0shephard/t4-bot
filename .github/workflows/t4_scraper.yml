@@ -1,0 +1,93 @@
+name: T4 GPU Price Index
+
+on:
+  schedule:
+    # Runs daily at 6:00 AM UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  scrape-and-index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # ──────────────────────────────────────────────
+      # Step 1: Aggregator (runs first — other scrapers may reference its data)
+      # ──────────────────────────────────────────────
+      - name: "Scraper: GetDeploying (aggregator)"
+        run: python getdeploying_t4_scraper.py
+        continue-on-error: true
+
+      # ──────────────────────────────────────────────
+      # Step 2: Individual provider scrapers
+      # ──────────────────────────────────────────────
+      - name: "Scraper: Vast.ai"
+        run: python vastai_t4_scraper.py
+        continue-on-error: true
+
+      - name: "Scraper: Tencent Cloud"
+        run: python tencent_t4_scraper.py
+        continue-on-error: true
+
+      - name: "Scraper: Thunder Compute"
+        run: python thundercompute_t4_scraper.py
+        continue-on-error: true
+
+      - name: "Scraper: NeevCloud"
+        run: python neevcloud_t4_scraper.py
+        continue-on-error: true
+
+      - name: "Scraper: Paperspace"
+        run: python paperspace_t4_scraper.py
+        continue-on-error: true
+
+      - name: "Scraper: GCP"
+        run: python gcp_t4_scraper.py
+        continue-on-error: true
+
+      - name: "Scraper: Azure"
+        run: python azure_t4_scraper.py
+        continue-on-error: true
+
+      - name: "Scraper: Cerebrium"
+        run: python cerebrium_t4_scraper.py
+        continue-on-error: true
+
+      - name: "Scraper: Alibaba Cloud"
+        run: python alibaba_t4_scraper.py
+        continue-on-error: true
+
+      - name: "Scraper: Replicate"
+        run: python replicate_t4_scraper.py
+        continue-on-error: true
+
+      - name: "Scraper: AWS"
+        run: python aws_t4_scraper.py
+        continue-on-error: true
+
+      # ──────────────────────────────────────────────
+      # Step 3: Calculate weighted index
+      # ──────────────────────────────────────────────
+      - name: Calculate T4 weighted index
+        run: python calculate_t4_index.py
+
+      # ──────────────────────────────────────────────
+      # Step 4: Push to Supabase
+      # ──────────────────────────────────────────────
+      - name: Push to Supabase
+        run: python push_t4_to_supabase.py
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}

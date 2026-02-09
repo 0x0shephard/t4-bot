@@ -91,3 +91,18 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+
+      # ──────────────────────────────────────────────
+      # Step 5: Push price to on-chain oracle (Sepolia)
+      # ──────────────────────────────────────────────
+      - name: Extract index price from JSON
+        id: extract-price
+        run: |
+          PRICE=$(python -c "import json; print(json.load(open('t4_weighted_index.json'))['final_index_price'])")
+          echo "price=$PRICE" >> "$GITHUB_OUTPUT"
+
+      - name: Push to MultiAssetOracle contract
+        run: python push_to_contract.py --price ${{ steps.extract-price.outputs.price }}
+        env:
+          SEPOLIA_RPC_URL: ${{ secrets.SEPOLIA_RPC_URL }}
+          ORACLE_UPDATER_PRIVATE_KEY: ${{ secrets.ORACLE_UPDATER_PRIVATE_KEY }}

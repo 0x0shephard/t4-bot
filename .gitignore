@@ -1,5 +1,6 @@
 .env
 .create_t4_tables.sql
-
+__pycache__/
+.DS_Store
 
 

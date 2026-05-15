@@ -3,7 +3,8 @@ name: T4 GPU Price Index
 on:
   schedule:
     # Keep CuOracle prices fresh under the 1 hour adapter staleness window.
-    - cron: '*/30 * * * *'
+    - cron: '0,40 0-23/2 * * *'  # Runs at :00 and :40 on even UTC hours
+    - cron: '20 1-23/2 * * *'    # Runs at :20 on odd UTC hours
   workflow_dispatch:
 
 jobs:

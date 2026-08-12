@@ -176,7 +176,9 @@ class CuOracleClient:
         balance_eth = self.w3.from_wei(self.w3.eth.get_balance(self.address), "ether")
         owner = self.contract.functions.owner().call()
         can_commit = self.can_commit()
-        can_reveal = owner.lower() == self.address.lower()
+        can_reveal = owner.lower() == self.address.lower() or bool(
+            self.contract.functions.allowedRoles(self.address).call()
+        )
 
         print("=" * 70)
         print("BYTESTRIKE CUORACLE PRICE UPDATER")
@@ -199,9 +201,11 @@ class CuOracleClient:
 
     def assert_can_reveal(self) -> None:
         owner = self.contract.functions.owner().call()
-        if owner.lower() != self.address.lower():
+        if owner.lower() != self.address.lower() and not bool(
+            self.contract.functions.allowedRoles(self.address).call()
+        ):
             raise PermissionError(
-                f"{self.address} can commit only; updatePrices reveal requires owner {owner}"
+                f"{self.address} is neither the CuOracle owner nor an allowed publisher role"
             )
 
     def min_commit_reveal_delay(self) -> int:
